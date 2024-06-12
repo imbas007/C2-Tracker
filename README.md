@@ -74,8 +74,9 @@ And finally, thanks to [Y_nexro](https://twitter.com/Y_NeXRo) for creating [C2Li
 If you want to host a private version, put your Shodan API key in an environment variable called `SHODAN_API_KEY`
 
 ```bash
-echo SHODAN_API_KEY=API_KEY >> ~/.bashrc
-bash
+python3 -m venv tracker
+source tracker/bin/activate
+export SHODAN_API_KEY="API_KEY"
 python3 -m pip install -r requirements.txt
 python3 tracker.py
 ```
